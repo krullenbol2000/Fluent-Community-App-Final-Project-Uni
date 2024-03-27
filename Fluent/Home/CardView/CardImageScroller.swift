@@ -1,0 +1,128 @@
+//
+//  CardImageScroller.swift
+//  Fluent
+//
+//  Created by Louise Mostovicz on 30/05/2022.
+//
+
+import SwiftUI
+import KingfisherSwiftUI
+
+struct CardImageScroller: View {
+    var person: Person
+    @State private var imageIndex = 0
+    @Binding var fullscreenMode: Bool
+    func updateImageIndex(addition: Bool){
+        let newIndex: Int
+        
+        if addition {
+            newIndex = imageIndex + 1
+        } else {
+            newIndex = imageIndex - 1
+        }
+        imageIndex = min (max(0, newIndex), person.imageURLS.count - 1)
+    }
+    let screenCutoff = (UIScreen.main.bounds.width / 2) * 0.4
+    var body: some View {
+        GeometryReader { geo in
+            ZStack {
+                ZStack{
+                    KFImage(person.imageURLS[imageIndex])
+                        .placeholder{
+                            Color.white
+                        }
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: geo.size.width, height: geo.size.height)
+                        .clipped()
+                    
+                    VStack {
+                        HStack {
+                            Image(systemName: "hand.thumbsup")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 80, height: 80)
+                                .opacity(Double(person.x / screenCutoff) - 1)
+                                .padding(.horizontal,10)
+                                .padding(.top,30)
+                                .foregroundColor(Color("Green"))
+                            Spacer()
+                            Image(systemName: "hand.thumbsdown")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 80, height: 80)
+                                .opacity(Double(person.x / screenCutoff * -1 - 1))
+                                .padding(.horizontal,10)
+                                .padding(.top,30)
+                                .foregroundColor(Color("Red"))
+                        }
+                        
+                        Spacer()
+                    }
+                    HStack{
+                        Rectangle()
+                            .onTapGesture(perform: {
+                                updateImageIndex(addition: false)
+                            })
+                        Rectangle()
+                            .onTapGesture(perform: {
+                                updateImageIndex(addition: true)
+                            })
+                    }
+                    .foregroundColor(Color.white.opacity(0.01))
+                }
+                VStack{
+                    HStack{
+                        ForEach(0..<person.imageURLS.count) {imageIndex in
+                            RoundedRectangle(cornerRadius: 20)
+                                .frame(height:4)
+                                .foregroundColor(self.imageIndex == imageIndex ? Color.white : Color.gray.opacity(0.5))
+                        }
+                    }
+                    .padding(.top, 6)
+                    .padding(.horizontal, fullscreenMode ? 0 : 12)
+                    Spacer()
+                    if !fullscreenMode {
+                        HStack{
+                            VStack(alignment: .leading){
+                                HStack{
+                                    Text("\(person.name), ")
+                                        .font(Font.custom("Dosis-Bold", size: 40))
+                                        .foregroundColor(.white)
+    //                                find way to make this all languages
+                                    Text(person.nlanguage)
+                                        .foregroundColor(.white)
+                                        .font(Font.custom("Dosis-Regular", size: 40))
+                                    
+                                }
+                                Text(person.bio)
+                                    .font(.system(size:18,  weight: .medium))
+                                    .foregroundColor(.white).opacity(0.7)
+                                    .lineLimit(1)
+                            }
+                            
+                            Spacer()
+                            
+                            Button(action: { fullscreenMode = true }, label: {
+                                Image(systemName: "info.circle.fill")
+                                    .font(.system(size: 26, weight: .medium))
+                            })
+
+                        }
+                        .padding(20)
+                    }
+                }
+                .foregroundColor(.white)
+
+            }
+            .cornerRadius(6)
+            .shadow(radius: 5)
+        }
+    }
+}
+
+struct CardImageScroller_Previews: PreviewProvider {
+    static var previews: some View {
+        CardImageScroller(person: Person.example, fullscreenMode: .constant(true))
+    }
+}

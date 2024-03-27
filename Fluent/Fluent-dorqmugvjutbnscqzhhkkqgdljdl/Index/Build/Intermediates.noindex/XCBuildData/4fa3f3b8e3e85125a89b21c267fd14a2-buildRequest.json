@@ -1,0 +1,65 @@
+{
+  "_buildCommand2" : {
+    "command" : "prepareForIndexing",
+    "enableIndexBuildArena" : true,
+    "targets" : null
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "8f8d07c15ca199532cb7e8525034fe8decb6b2e5aac52ef832a05d2bbc27adc5"
+    },
+    {
+      "guid" : "8f8d07c15ca199532cb7e8525034fe8d9a45f98e7992268c2c828d38af3ff9aa"
+    },
+    {
+      "guid" : "8f8d07c15ca199532cb7e8525034fe8dcf7f47ac21d3c7ac9c0faa239791386a"
+    }
+  ],
+  "containerPath" : "/Users/louisemostovicz/Desktop/Fluent/Fluent.xcodeproj",
+  "continueBuildingAfterErrors" : true,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "indexbuild",
+    "activeArchitecture" : "x86_64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "iphonesimulator",
+      "sdk" : "iphonesimulator15.4",
+      "sdkVariant" : "iphonesimulator",
+      "supportedArchitectures" : [
+        "x86_64"
+      ],
+      "targetArchitecture" : "x86_64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/louisemostovicz/Desktop/Fluent/Fluent/Fluent-dorqmugvjutbnscqzhhkkqgdljdl/Index/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/louisemostovicz/Desktop/Fluent/Fluent/Fluent-dorqmugvjutbnscqzhhkkqgdljdl/Index/Build/Products",
+      "derivedDataPath" : "/Users/louisemostovicz/Desktop/Fluent/Fluent",
+      "indexDataStoreFolderPath" : "/Users/louisemostovicz/Desktop/Fluent/Fluent/Fluent-dorqmugvjutbnscqzhhkkqgdljdl/Index/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/louisemostovicz/Desktop/Fluent/Fluent/Fluent-dorqmugvjutbnscqzhhkkqgdljdl/Index/PrecompiledHeaders",
+      "pchPath" : "/Users/louisemostovicz/Desktop/Fluent/Fluent/Fluent-dorqmugvjutbnscqzhhkkqgdljdl/Index/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO",
+          "INDEX_ARENA_INFO_REGULAR_BUILD_PRODUCTS_DIR" : "/Users/louisemostovicz/Desktop/Fluent/Fluent/Fluent-dorqmugvjutbnscqzhhkkqgdljdl/Build/Products",
+          "ONLY_ACTIVE_ARCH" : "YES"
+        }
+      }
+    }
+  },
+  "qos" : "utility",
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "launch",
+  "shouldCollectMetrics" : false,
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

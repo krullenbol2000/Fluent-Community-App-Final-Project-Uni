@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)"
+options: "8c4cc6af5aa52971e01f674ffd838d93ae7f5fc1782ce61508382f6e0020383f"
+build_start_time: [1652251550, 588314056]
+build_end_time: [1652251553, 228081941]
+inputs:
+  "/Users/louisemostovicz/Desktop/Fluent/Fluent/FluentApp.swift": [1650862926, 364223480]
+  "/Users/louisemostovicz/Desktop/Fluent/Fluent/WelcomePage.swift": [1652125402, 898556947]

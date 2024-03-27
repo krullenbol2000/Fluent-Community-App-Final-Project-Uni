@@ -1,0 +1,1078 @@
+{
+  "kind": "Root",
+  "name": "TopLevel",
+  "printedName": "TopLevel",
+  "children": [
+    {
+      "kind": "Import",
+      "name": "SwiftUI",
+      "printedName": "SwiftUI",
+      "declKind": "Import",
+      "moduleName": "Fluent",
+      "declAttributes": [
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "Var",
+      "name": "lightGreyColor",
+      "printedName": "lightGreyColor",
+      "children": [
+        {
+          "kind": "TypeNominal",
+          "name": "Color",
+          "printedName": "SwiftUI.Color",
+          "usr": "s:7SwiftUI5ColorV"
+        }
+      ],
+      "declKind": "Var",
+      "usr": "s:6Fluent14lightGreyColor7SwiftUI0D0Vvp",
+      "mangledName": "$s6Fluent14lightGreyColor7SwiftUI0D0Vvp",
+      "moduleName": "Fluent",
+      "declAttributes": [
+        "HasInitialValue",
+        "HasStorage"
+      ],
+      "isLet": true,
+      "hasStorage": true
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "ContentView",
+      "printedName": "ContentView",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "username",
+          "printedName": "username",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6Fluent11ContentViewV8usernameSSvp",
+          "mangledName": "$s6Fluent11ContentViewV8usernameSSvp",
+          "moduleName": "Fluent",
+          "declAttributes": [
+            "ProjectedValueProperty",
+            "Custom"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6Fluent11ContentViewV8usernameSSvg",
+              "mangledName": "$s6Fluent11ContentViewV8usernameSSvg",
+              "moduleName": "Fluent",
+              "implicit": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6Fluent11ContentViewV8usernameSSvs",
+              "mangledName": "$s6Fluent11ContentViewV8usernameSSvs",
+              "moduleName": "Fluent",
+              "implicit": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6Fluent11ContentViewV8usernameSSvM",
+              "mangledName": "$s6Fluent11ContentViewV8usernameSSvM",
+              "moduleName": "Fluent",
+              "implicit": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "$username",
+          "printedName": "$username",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Binding",
+              "printedName": "SwiftUI.Binding<Swift.String>",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:7SwiftUI7BindingV"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6Fluent11ContentViewV9$username7SwiftUI7BindingVySSGvp",
+          "mangledName": "$s6Fluent11ContentViewV9$username7SwiftUI7BindingVySSGvp",
+          "moduleName": "Fluent",
+          "implicit": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Binding",
+                  "printedName": "SwiftUI.Binding<Swift.String>",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:7SwiftUI7BindingV"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6Fluent11ContentViewV9$username7SwiftUI7BindingVySSGvg",
+              "mangledName": "$s6Fluent11ContentViewV9$username7SwiftUI7BindingVySSGvg",
+              "moduleName": "Fluent",
+              "implicit": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "_username",
+          "printedName": "_username",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "State",
+              "printedName": "SwiftUI.State<Swift.String>",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:7SwiftUI5StateV"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6Fluent11ContentViewV9_username33_B0CC9EB83E92FC8FB1E1056FE486AAF7LL7SwiftUI5StateVySSGvp",
+          "mangledName": "$s6Fluent11ContentViewV9_username33_B0CC9EB83E92FC8FB1E1056FE486AAF7LL7SwiftUI5StateVySSGvp",
+          "moduleName": "Fluent",
+          "implicit": true,
+          "isInternal": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 0,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "password",
+          "printedName": "password",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6Fluent11ContentViewV8passwordSSvp",
+          "mangledName": "$s6Fluent11ContentViewV8passwordSSvp",
+          "moduleName": "Fluent",
+          "declAttributes": [
+            "ProjectedValueProperty",
+            "Custom"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6Fluent11ContentViewV8passwordSSvg",
+              "mangledName": "$s6Fluent11ContentViewV8passwordSSvg",
+              "moduleName": "Fluent",
+              "implicit": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6Fluent11ContentViewV8passwordSSvs",
+              "mangledName": "$s6Fluent11ContentViewV8passwordSSvs",
+              "moduleName": "Fluent",
+              "implicit": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6Fluent11ContentViewV8passwordSSvM",
+              "mangledName": "$s6Fluent11ContentViewV8passwordSSvM",
+              "moduleName": "Fluent",
+              "implicit": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "$password",
+          "printedName": "$password",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Binding",
+              "printedName": "SwiftUI.Binding<Swift.String>",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:7SwiftUI7BindingV"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6Fluent11ContentViewV9$password7SwiftUI7BindingVySSGvp",
+          "mangledName": "$s6Fluent11ContentViewV9$password7SwiftUI7BindingVySSGvp",
+          "moduleName": "Fluent",
+          "implicit": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Binding",
+                  "printedName": "SwiftUI.Binding<Swift.String>",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:7SwiftUI7BindingV"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6Fluent11ContentViewV9$password7SwiftUI7BindingVySSGvg",
+              "mangledName": "$s6Fluent11ContentViewV9$password7SwiftUI7BindingVySSGvg",
+              "moduleName": "Fluent",
+              "implicit": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "_password",
+          "printedName": "_password",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "State",
+              "printedName": "SwiftUI.State<Swift.String>",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:7SwiftUI5StateV"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6Fluent11ContentViewV9_password33_B0CC9EB83E92FC8FB1E1056FE486AAF7LL7SwiftUI5StateVySSGvp",
+          "mangledName": "$s6Fluent11ContentViewV9_password33_B0CC9EB83E92FC8FB1E1056FE486AAF7LL7SwiftUI5StateVySSGvp",
+          "moduleName": "Fluent",
+          "implicit": true,
+          "isInternal": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 1,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "body",
+          "printedName": "body",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "OpaqueTypeArchetype",
+              "printedName": "some SwiftUI.View",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "View",
+                  "printedName": "SwiftUI.View",
+                  "usr": "s:7SwiftUI4ViewP"
+                }
+              ]
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6Fluent11ContentViewV4bodyQrvp",
+          "mangledName": "$s6Fluent11ContentViewV4bodyQrvp",
+          "moduleName": "Fluent",
+          "declAttributes": [
+            "Custom"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "OpaqueTypeArchetype",
+                  "printedName": "some SwiftUI.View",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "View",
+                      "printedName": "SwiftUI.View",
+                      "usr": "s:7SwiftUI4ViewP"
+                    }
+                  ]
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6Fluent11ContentViewV4bodyQrvg",
+              "mangledName": "$s6Fluent11ContentViewV4bodyQrvg",
+              "moduleName": "Fluent",
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "TypeDecl",
+          "name": "mySignupButton",
+          "printedName": "mySignupButton",
+          "children": [
+            {
+              "kind": "Var",
+              "name": "body",
+              "printedName": "body",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "OpaqueTypeArchetype",
+                  "printedName": "some SwiftUI.View",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "View",
+                      "printedName": "SwiftUI.View",
+                      "usr": "s:7SwiftUI4ViewP"
+                    }
+                  ]
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:6Fluent11ContentViewV14mySignupButtonV4bodyQrvp",
+              "mangledName": "$s6Fluent11ContentViewV14mySignupButtonV4bodyQrvp",
+              "moduleName": "Fluent",
+              "declAttributes": [
+                "Custom"
+              ],
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "OpaqueTypeArchetype",
+                      "printedName": "some SwiftUI.View",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "View",
+                          "printedName": "SwiftUI.View",
+                          "usr": "s:7SwiftUI4ViewP"
+                        }
+                      ]
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:6Fluent11ContentViewV14mySignupButtonV4bodyQrvg",
+                  "mangledName": "$s6Fluent11ContentViewV14mySignupButtonV4bodyQrvg",
+                  "moduleName": "Fluent",
+                  "accessorKind": "get"
+                }
+              ]
+            },
+            {
+              "kind": "Constructor",
+              "name": "init",
+              "printedName": "init()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "mySignupButton",
+                  "printedName": "Fluent.ContentView.mySignupButton",
+                  "usr": "s:6Fluent11ContentViewV14mySignupButtonV"
+                }
+              ],
+              "declKind": "Constructor",
+              "usr": "s:6Fluent11ContentViewV14mySignupButtonVAEycfc",
+              "mangledName": "$s6Fluent11ContentViewV14mySignupButtonVAEycfc",
+              "moduleName": "Fluent",
+              "implicit": true,
+              "init_kind": "Designated"
+            }
+          ],
+          "declKind": "Struct",
+          "usr": "s:6Fluent11ContentViewV14mySignupButtonV",
+          "mangledName": "$s6Fluent11ContentViewV14mySignupButtonV",
+          "moduleName": "Fluent",
+          "conformances": [
+            {
+              "kind": "Conformance",
+              "name": "View",
+              "printedName": "View",
+              "children": [
+                {
+                  "kind": "TypeWitness",
+                  "name": "Body",
+                  "printedName": "Body",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "OpaqueTypeArchetype",
+                      "printedName": "some SwiftUI.View",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "View",
+                          "printedName": "SwiftUI.View",
+                          "usr": "s:7SwiftUI4ViewP"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "usr": "s:7SwiftUI4ViewP",
+              "mangledName": "$s7SwiftUI4ViewP"
+            },
+            {
+              "kind": "Conformance",
+              "name": "Sendable",
+              "printedName": "Sendable",
+              "usr": "s:s8SendableP",
+              "mangledName": "$ss8SendableP"
+            }
+          ]
+        },
+        {
+          "kind": "TypeDecl",
+          "name": "myLoginButton",
+          "printedName": "myLoginButton",
+          "children": [
+            {
+              "kind": "Var",
+              "name": "body",
+              "printedName": "body",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "OpaqueTypeArchetype",
+                  "printedName": "some SwiftUI.View",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "View",
+                      "printedName": "SwiftUI.View",
+                      "usr": "s:7SwiftUI4ViewP"
+                    }
+                  ]
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:6Fluent11ContentViewV13myLoginButtonV4bodyQrvp",
+              "mangledName": "$s6Fluent11ContentViewV13myLoginButtonV4bodyQrvp",
+              "moduleName": "Fluent",
+              "declAttributes": [
+                "Custom"
+              ],
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "OpaqueTypeArchetype",
+                      "printedName": "some SwiftUI.View",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "View",
+                          "printedName": "SwiftUI.View",
+                          "usr": "s:7SwiftUI4ViewP"
+                        }
+                      ]
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:6Fluent11ContentViewV13myLoginButtonV4bodyQrvg",
+                  "mangledName": "$s6Fluent11ContentViewV13myLoginButtonV4bodyQrvg",
+                  "moduleName": "Fluent",
+                  "accessorKind": "get"
+                }
+              ]
+            },
+            {
+              "kind": "Constructor",
+              "name": "init",
+              "printedName": "init()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "myLoginButton",
+                  "printedName": "Fluent.ContentView.myLoginButton",
+                  "usr": "s:6Fluent11ContentViewV13myLoginButtonV"
+                }
+              ],
+              "declKind": "Constructor",
+              "usr": "s:6Fluent11ContentViewV13myLoginButtonVAEycfc",
+              "mangledName": "$s6Fluent11ContentViewV13myLoginButtonVAEycfc",
+              "moduleName": "Fluent",
+              "implicit": true,
+              "init_kind": "Designated"
+            }
+          ],
+          "declKind": "Struct",
+          "usr": "s:6Fluent11ContentViewV13myLoginButtonV",
+          "mangledName": "$s6Fluent11ContentViewV13myLoginButtonV",
+          "moduleName": "Fluent",
+          "conformances": [
+            {
+              "kind": "Conformance",
+              "name": "View",
+              "printedName": "View",
+              "children": [
+                {
+                  "kind": "TypeWitness",
+                  "name": "Body",
+                  "printedName": "Body",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "OpaqueTypeArchetype",
+                      "printedName": "some SwiftUI.View",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "View",
+                          "printedName": "SwiftUI.View",
+                          "usr": "s:7SwiftUI4ViewP"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "usr": "s:7SwiftUI4ViewP",
+              "mangledName": "$s7SwiftUI4ViewP"
+            },
+            {
+              "kind": "Conformance",
+              "name": "Sendable",
+              "printedName": "Sendable",
+              "usr": "s:s8SendableP",
+              "mangledName": "$ss8SendableP"
+            }
+          ]
+        },
+        {
+          "kind": "TypeDecl",
+          "name": "ContentView_Previews",
+          "printedName": "ContentView_Previews",
+          "children": [
+            {
+              "kind": "Var",
+              "name": "previews",
+              "printedName": "previews",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "OpaqueTypeArchetype",
+                  "printedName": "some SwiftUI.View",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "View",
+                      "printedName": "SwiftUI.View",
+                      "usr": "s:7SwiftUI4ViewP"
+                    }
+                  ]
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:6Fluent11ContentViewV0bC9_PreviewsV8previewsQrvpZ",
+              "mangledName": "$s6Fluent11ContentViewV0bC9_PreviewsV8previewsQrvpZ",
+              "moduleName": "Fluent",
+              "static": true,
+              "declAttributes": [
+                "Custom"
+              ],
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "OpaqueTypeArchetype",
+                      "printedName": "some SwiftUI.View",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "View",
+                          "printedName": "SwiftUI.View",
+                          "usr": "s:7SwiftUI4ViewP"
+                        }
+                      ]
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:6Fluent11ContentViewV0bC9_PreviewsV8previewsQrvgZ",
+                  "mangledName": "$s6Fluent11ContentViewV0bC9_PreviewsV8previewsQrvgZ",
+                  "moduleName": "Fluent",
+                  "static": true,
+                  "accessorKind": "get"
+                }
+              ]
+            },
+            {
+              "kind": "Constructor",
+              "name": "init",
+              "printedName": "init()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "ContentView_Previews",
+                  "printedName": "Fluent.ContentView.ContentView_Previews",
+                  "usr": "s:6Fluent11ContentViewV0bC9_PreviewsV"
+                }
+              ],
+              "declKind": "Constructor",
+              "usr": "s:6Fluent11ContentViewV0bC9_PreviewsVAEycfc",
+              "mangledName": "$s6Fluent11ContentViewV0bC9_PreviewsVAEycfc",
+              "moduleName": "Fluent",
+              "implicit": true,
+              "declAttributes": [
+                "Custom"
+              ],
+              "init_kind": "Designated"
+            }
+          ],
+          "declKind": "Struct",
+          "usr": "s:6Fluent11ContentViewV0bC9_PreviewsV",
+          "mangledName": "$s6Fluent11ContentViewV0bC9_PreviewsV",
+          "moduleName": "Fluent",
+          "declAttributes": [
+            "Custom"
+          ],
+          "conformances": [
+            {
+              "kind": "Conformance",
+              "name": "PreviewProvider",
+              "printedName": "PreviewProvider",
+              "children": [
+                {
+                  "kind": "TypeWitness",
+                  "name": "Previews",
+                  "printedName": "Previews",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "OpaqueTypeArchetype",
+                      "printedName": "some SwiftUI.View",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "View",
+                          "printedName": "SwiftUI.View",
+                          "usr": "s:7SwiftUI4ViewP"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "usr": "s:7SwiftUI15PreviewProviderP",
+              "mangledName": "$s7SwiftUI15PreviewProviderP"
+            },
+            {
+              "kind": "Conformance",
+              "name": "_PreviewProvider",
+              "printedName": "_PreviewProvider",
+              "usr": "s:7SwiftUI16_PreviewProviderP",
+              "mangledName": "$s7SwiftUI16_PreviewProviderP"
+            },
+            {
+              "kind": "Conformance",
+              "name": "Sendable",
+              "printedName": "Sendable",
+              "usr": "s:s8SendableP",
+              "mangledName": "$ss8SendableP"
+            }
+          ]
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(username:password:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "ContentView",
+              "printedName": "Fluent.ContentView",
+              "usr": "s:6Fluent11ContentViewV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "hasDefaultArg": true,
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "hasDefaultArg": true,
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:6Fluent11ContentViewV8username8passwordACSS_SStcfc",
+          "mangledName": "$s6Fluent11ContentViewV8username8passwordACSS_SStcfc",
+          "moduleName": "Fluent",
+          "implicit": true,
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "ContentView",
+              "printedName": "Fluent.ContentView",
+              "usr": "s:6Fluent11ContentViewV"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:6Fluent11ContentViewVACycfc",
+          "mangledName": "$s6Fluent11ContentViewVACycfc",
+          "moduleName": "Fluent",
+          "implicit": true,
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Struct",
+      "usr": "s:6Fluent11ContentViewV",
+      "mangledName": "$s6Fluent11ContentViewV",
+      "moduleName": "Fluent",
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "View",
+          "printedName": "View",
+          "children": [
+            {
+              "kind": "TypeWitness",
+              "name": "Body",
+              "printedName": "Body",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "OpaqueTypeArchetype",
+                  "printedName": "some SwiftUI.View",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "View",
+                      "printedName": "SwiftUI.View",
+                      "usr": "s:7SwiftUI4ViewP"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "usr": "s:7SwiftUI4ViewP",
+          "mangledName": "$s7SwiftUI4ViewP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Sendable",
+          "printedName": "Sendable",
+          "usr": "s:s8SendableP",
+          "mangledName": "$ss8SendableP"
+        }
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "SwiftUI",
+      "printedName": "SwiftUI",
+      "declKind": "Import",
+      "moduleName": "Fluent",
+      "declAttributes": [
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "FluentApp",
+      "printedName": "FluentApp",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "body",
+          "printedName": "body",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "OpaqueTypeArchetype",
+              "printedName": "some SwiftUI.Scene",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Scene",
+                  "printedName": "SwiftUI.Scene",
+                  "usr": "s:7SwiftUI5SceneP"
+                }
+              ]
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6Fluent0A3AppV4bodyQrvp",
+          "mangledName": "$s6Fluent0A3AppV4bodyQrvp",
+          "moduleName": "Fluent",
+          "declAttributes": [
+            "Custom"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "OpaqueTypeArchetype",
+                  "printedName": "some SwiftUI.Scene",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Scene",
+                      "printedName": "SwiftUI.Scene",
+                      "usr": "s:7SwiftUI5SceneP"
+                    }
+                  ]
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6Fluent0A3AppV4bodyQrvg",
+              "mangledName": "$s6Fluent0A3AppV4bodyQrvg",
+              "moduleName": "Fluent",
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "FluentApp",
+              "printedName": "Fluent.FluentApp",
+              "usr": "s:6Fluent0A3AppV"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:6Fluent0A3AppVACycfc",
+          "mangledName": "$s6Fluent0A3AppVACycfc",
+          "moduleName": "Fluent",
+          "implicit": true,
+          "declAttributes": [
+            "Custom"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Function",
+          "name": "$main",
+          "printedName": "$main()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:6Fluent0A3AppV5$mainyyFZ",
+          "mangledName": "$s6Fluent0A3AppV5$mainyyFZ",
+          "moduleName": "Fluent",
+          "static": true,
+          "implicit": true,
+          "funcSelfKind": "NonMutating"
+        }
+      ],
+      "declKind": "Struct",
+      "usr": "s:6Fluent0A3AppV",
+      "mangledName": "$s6Fluent0A3AppV",
+      "moduleName": "Fluent",
+      "declAttributes": [
+        "MainType"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "App",
+          "printedName": "App",
+          "children": [
+            {
+              "kind": "TypeWitness",
+              "name": "Body",
+              "printedName": "Body",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "OpaqueTypeArchetype",
+                  "printedName": "some SwiftUI.Scene",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Scene",
+                      "printedName": "SwiftUI.Scene",
+                      "usr": "s:7SwiftUI5SceneP"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "usr": "s:7SwiftUI3AppP",
+          "mangledName": "$s7SwiftUI3AppP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Sendable",
+          "printedName": "Sendable",
+          "usr": "s:s8SendableP",
+          "mangledName": "$ss8SendableP"
+        }
+      ]
+    }
+  ],
+  "json_format_version": 6
+}

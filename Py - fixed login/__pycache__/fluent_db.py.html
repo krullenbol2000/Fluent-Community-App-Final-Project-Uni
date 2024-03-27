@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>fluent_db.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #6897bb;}
+.s4 { color: #808080;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+fluent_db.py</font>
+</center></td></tr></table>
+<pre><span class="s0">class </span><span class="s1">fluent_db:</span>
+    <span class="s0">def </span><span class="s1">__init__(self</span><span class="s0">, </span><span class="s1">mySQL):</span>
+        <span class="s1">self.mysql = mySQL</span>
+    <span class="s0">def </span><span class="s1">execute(self</span><span class="s0">, </span><span class="s1">command):</span>
+        <span class="s1">cursor = self.mysql.cursor()</span>
+        <span class="s1">cursor.execute(command)</span>
+        <span class="s1">self.mysql.commit()</span>
+        <span class="s1">cursor.close()</span>
+    <span class="s0">def </span><span class="s1">fetch(self</span><span class="s0">, </span><span class="s1">command):</span>
+        <span class="s1">cursor = self.mysql.cursor()</span>
+        <span class="s1">cursor.execute(command)</span>
+        <span class="s1">rep = cursor.fetchall()</span>
+        <span class="s1">cursor.close()</span>
+        <span class="s0">return </span><span class="s1">rep</span>
+    <span class="s0">def </span><span class="s1">get_users(self):</span>
+        <span class="s1">users = self.fetch(</span><span class="s2">&quot;SELECT * FROM fluent.users&quot;</span><span class="s1">)</span>
+        <span class="s1">result = []</span>
+        <span class="s0">for </span><span class="s1">user </span><span class="s0">in </span><span class="s1">users:</span>
+            <span class="s1">newuser = {}</span>
+            <span class="s1">newuser[</span><span class="s2">'name'</span><span class="s1">] = user[</span><span class="s3">1</span><span class="s1">]</span>
+            <span class="s1">newuser[</span><span class="s2">'imageURL'</span><span class="s1">] = [</span><span class="s2">&quot;https://picsum.photos/400/300&quot;</span><span class="s1">]</span>
+            <span class="s1">newuser[</span><span class="s2">'nlanguage'</span><span class="s1">] = user[</span><span class="s3">5</span><span class="s1">]</span>
+            <span class="s1">newuser[</span><span class="s2">'bio'</span><span class="s1">] = </span><span class="s2">&quot;Im a bio, look at me.&quot;</span>
+            <span class="s1">lans = self.get_user_languages(user[</span><span class="s3">0</span><span class="s1">])</span>
+            <span class="s1">newuser[</span><span class="s2">'lanSkills'</span><span class="s1">] = [{</span><span class="s2">'language'</span><span class="s1">: lan.language</span><span class="s0">, </span><span class="s2">'skill'</span><span class="s1">: lan.fluency} </span><span class="s0">for </span><span class="s1">lan </span><span class="s0">in </span><span class="s1">lans]</span>
+            <span class="s1">result.append(newuser)</span>
+        <span class="s0">return </span><span class="s1">result</span>
+    <span class="s0">def </span><span class="s1">get_languages(self):</span>
+        <span class="s1">cmd = </span><span class="s2">&quot;SELECT * FROM fluent.languages&quot;</span>
+        <span class="s0">return </span><span class="s1">self.fetch(cmd)</span>
+
+    <span class="s0">def </span><span class="s1">get_user(self</span><span class="s0">, </span><span class="s1">email):</span>
+        <span class="s1">cmd = </span><span class="s2">&quot;select * from fluent.users WHERE email = '&quot; </span><span class="s1">+ email + </span><span class="s2">&quot;'&quot;</span>
+        <span class="s1">users = self.fetch(cmd)</span>
+        <span class="s0">if </span><span class="s1">len(users) &gt; </span><span class="s3">0</span><span class="s1">:</span>
+            <span class="s0">return </span><span class="s1">users[</span><span class="s3">0</span><span class="s1">] </span><span class="s4">##EA it returns as a (,,,)</span>
+        <span class="s0">else</span><span class="s1">:</span>
+            <span class="s0">return</span>
+    <span class="s0">def </span><span class="s1">get_language_id(self</span><span class="s0">, </span><span class="s1">language):</span>
+        <span class="s1">cmd = </span><span class="s2">&quot;SELECT id FROM fluent.languages where language = '&quot;</span><span class="s1">+language+</span><span class="s2">&quot;' or abb = '&quot;</span><span class="s1">+language+</span><span class="s2">&quot;'&quot;</span>
+        <span class="s0">return </span><span class="s1">self.fetch(cmd)[</span><span class="s3">0</span><span class="s1">][</span><span class="s3">0</span><span class="s1">]</span>
+
+    <span class="s0">def </span><span class="s1">get_user_skills(self</span><span class="s0">, </span><span class="s1">uid</span><span class="s0">, </span><span class="s1">lid):</span>
+        <span class="s1">cmd = </span><span class="s2">&quot;SELECT * FROM fluent.user_lang where u_id=%s and l_id=%s&quot; </span><span class="s1">%(uid</span><span class="s0">, </span><span class="s1">lid)</span>
+        <span class="s0">return </span><span class="s1">self.fetch(cmd)[</span><span class="s3">0</span><span class="s1">]</span>
+
+    <span class="s0">def </span><span class="s1">get_user_languages(self</span><span class="s0">, </span><span class="s1">uid):</span>
+        <span class="s1">cmd = </span><span class="s2">&quot;&quot;&quot;SELECT l_id, language, fluency FROM  
+                (SELECT u_id, l_id ,fluency, language FROM fluent.user_lang  
+                JOIN fluent.languages where languages.id = user_lang.l_id) as t1  
+                WHERE t1.u_id =  &quot;&quot;&quot; </span><span class="s1">+ str(uid)</span>
+        <span class="s1">langs = self.fetch(cmd)</span>
+        <span class="s0">return </span><span class="s1">[{</span><span class="s2">&quot;id&quot;</span><span class="s1">: lan[</span><span class="s3">0</span><span class="s1">]</span><span class="s0">, </span><span class="s2">&quot;name&quot;</span><span class="s1">: lan[</span><span class="s3">1</span><span class="s1">]</span><span class="s0">, </span><span class="s2">&quot;fluency&quot;</span><span class="s1">: lan[</span><span class="s3">2</span><span class="s1">]</span><span class="s0">, </span><span class="s2">&quot;fluency&quot;</span><span class="s1">: lan[</span><span class="s3">3</span><span class="s1">]} </span><span class="s0">for </span><span class="s1">lan </span><span class="s0">in </span><span class="s1">langs]</span>
+
+    <span class="s0">def </span><span class="s1">insert_user(self</span><span class="s0">, </span><span class="s1">email</span><span class="s0">, </span><span class="s1">name</span><span class="s0">, </span><span class="s1">password</span><span class="s0">, </span><span class="s1">phone):</span>
+        <span class="s1">cmd  = </span><span class="s2">&quot;&quot;&quot;insert into fluent.users(name, password, email, phonenumber)  
+           values('%s', '%s', '%s', '%s'); &quot;&quot;&quot; </span><span class="s1">%(name</span><span class="s0">, </span><span class="s1">password</span><span class="s0">, </span><span class="s1">email</span><span class="s0">, </span><span class="s1">phone)</span>
+        <span class="s1">self.execute(cmd)</span>
+
+    <span class="s0">def </span><span class="s1">insert_user_skill(self</span><span class="s0">, </span><span class="s1">uid</span><span class="s0">, </span><span class="s1">native</span><span class="s0">, </span><span class="s1">lan</span><span class="s0">, </span><span class="s1">fluency</span><span class="s0">, </span><span class="s1">userlancol):</span>
+        <span class="s1">lanID = self.get_language_id(lan)</span>
+        <span class="s1">currentSkill = self.get_user_skills(uid</span><span class="s0">, </span><span class="s1">lanID)</span>
+        <span class="s0">if </span><span class="s1">currentSkill:</span>
+            <span class="s1">cmd = </span><span class="s2">&quot;update fluent.user_lang SET fluency=&quot;</span><span class="s1">+fluency+</span><span class="s2">&quot;, native=&quot;</span><span class="s1">+native+</span><span class="s2">&quot;, userlanguagescol={userlancol} WHERE id=&quot; </span><span class="s1">+currentSkill[</span><span class="s2">&quot;id&quot;</span><span class="s1">]</span>
+        <span class="s0">else</span><span class="s1">:</span>
+            <span class="s1">cmd = </span><span class="s2">&quot;&quot;&quot;&quot;insert into fluent.user_lang(u_id, l_id, fluency, native, userlanguagescol)&quot; + 
+                    &quot;values(%s, %s, %s, %s, %s); &quot;&quot;&quot; </span><span class="s1">%(uid</span><span class="s0">, </span><span class="s1">lanID</span><span class="s0">, </span><span class="s1">str(fluency)</span><span class="s0">, </span><span class="s1">native</span><span class="s0">, </span><span class="s1">userlancol)</span>
+        <span class="s1">self.execute(cmd)</span></pre>
+</body>
+</html>
